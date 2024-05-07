@@ -411,3 +411,76 @@
     brightness_path: /sys/class/backlight/panel/brightness
     default_brightness: 255
     theme: portrait_hdpi
+
+- name: samsung SM-J500H
+  id: j53g
+  codenames:
+      - SM-J500H
+      - j53g
+      - j53gxx
+  architecture: 
+  block_devs:
+    base_dirs:
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name
+      - /dev/block/bootdevice/by-name
+    system:
+      - /dev/block/bootdevice/by-name/system
+      - /dev/block/mmcblk0p25
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/system
+    cache:
+      - /dev/block/bootdevice/by-name/cache
+      - /dev/block/mmcblk0p26
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/cache
+    data:
+      - /dev/block/bootdevice/by-name/userdata
+      - /dev/block/mmcblk0p28
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/userdata
+    boot:
+      - /dev/block/bootdevice/by-name/boot
+      - /dev/block/mmcblk0p16
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/boot
+      - ext4
+    recovery:
+      - /dev/block/bootdevice/by-name/recovery
+      - /dev/block/mmcblk0p17
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/recovery
+    extra:
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/aboot
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/apnhlos
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/backup
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/ddr
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/efs
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/fota
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/fsc
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/fsg
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/hidden
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/modem
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/modemst1
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/modemst2
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/pad
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/param
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/persdata
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/persist
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/persistent
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/qhee
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/qsee
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/rpm
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/sbl1
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/sec
+      - /dev/block/platform/soc.0/7824900.sdhci/by-name/ssd
+      - acct
+      - /dev/block/mmcblk1
+      - /dev/block/mmcblk1p1
+ 
+  boot_ui:
+    supported: true
+    flags:
+      - TW_GRAPHICS_FORCE_USE_LINELENGTH
+    brightness_path: /sys/class/leds/lcd-backlight/brightness
+    max_brightness: 255
+    default_brightness: 168
+    cpu_temp_path: /sys/devices/virtual/thermal/thermal_zone0/temp
+    battery_path: /sys/class/power_supply/battery/capacity
+    graphics_backends:
+      - fbdev
+    theme: portrait_hdpi
